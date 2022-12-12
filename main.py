@@ -5,6 +5,14 @@ def to_check_leapyear(leapyear):
         return f'{leapyear} is not a leapyear'
 
 
-num = int(input("Enter a Year to check it is leapyear or not: "))
-value = to_check_leapyear(num)
-print(value)
+def validate_input():
+    if num.isdigit():
+        convert_num = int(num)
+        value = to_check_leapyear(convert_num)
+        print(value)
+    else:
+        print("Invalid input, Please enter a valid year")
+
+
+num = input("Enter a Year to check it is leapyear or not: ")
+validate_input()
